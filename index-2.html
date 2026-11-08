@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#c8102e">
+<title>TÜRKİYE360 | Türkiye'ye Açılan Dijital Kapı</title>
+<style>
+:root{--red:#c8102e;--ink:#25282c;--muted:#687078;--line:#e6e8eb;--bg:#f5f6f7}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.wrap{width:min(1100px,92%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0}
+.brand{font-size:25px;font-weight:900;letter-spacing:.5px}.brand span{color:var(--red)}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#454b51;text-decoration:none;font-weight:700;font-size:14px}
+.hero{background:linear-gradient(115deg,#fff 0%,#fff 62%,#fcecef 100%);padding:54px 0 45px;border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--red);font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:1.5px}
+h1{font-size:clamp(34px,7vw,58px);line-height:1.05;margin:12px 0}.hero p{max-width:620px;color:var(--muted);font-size:17px}
+.search{display:flex;max-width:600px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px;margin-top:24px;box-shadow:0 8px 24px #20242a0c}
+.search input{border:0;outline:0;flex:1;min-width:0;padding:12px;font-size:15px}.search button,.btn{border:0;background:var(--red);color:#fff;border-radius:9px;padding:12px 18px;font-weight:800;cursor:pointer}
+section{padding:34px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:17px}h2{font-size:25px;margin:0}.sub{color:var(--muted);margin:4px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px;box-shadow:0 4px 14px #20242a08}.card h3{margin:8px 0 5px}.card p{margin:0;color:var(--muted);font-size:14px}.symbol{width:42px;height:42px;border-radius:12px;background:#fff0f2;color:var(--red);display:grid;place-items:center;font-size:21px;font-weight:900}
+.history-list{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.date{font-weight:900;color:var(--red);font-size:13px}
+.quiz{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0}.answers button{background:#f7f7f8;border:1px solid var(--line);padding:13px;border-radius:10px;text-align:left;font-weight:700;cursor:pointer;color:var(--ink)}.answers button:disabled{cursor:default;opacity:.8}.feedback{font-weight:700;min-height:26px}.score{color:var(--muted);font-size:14px}
+footer{background:#25282c;color:#fff;padding:25px 0;margin-top:25px}footer p{color:#c9cdd1;margin:5px 0}
+@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}nav{gap:12px}.grid,.history-list{grid-template-columns:1fr 1fr}.hero{padding:38px 0}.answers{grid-template-columns:1fr}}
+@media(max-width:430px){.grid,.history-list{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap top"><div class="brand">TÜRKİYE<span>360</span></div><nav><a href="#kesfet">Keşfet</a><a href="#tarih">Türk Tarihi</a><a href="#yarisma">Bilgi Yarışması</a></nav></div></header>
+<main>
+<div class="hero"><div class="wrap"><div class="eyebrow">Türkiye'ye Açılan Dijital Kapı</div><h1>Türkiye'yi keşfet,<br><span style="color:var(--red)">bilginle güçlen.</span></h1><p>Tarih, kültür ve genel kültürü tek noktada buluşturan TÜRKİYE360'ın ilk sürümüne hoş geldin.</p><div class="search"><input id="searchInput" placeholder="Sitede ara: tarih, 1071, 1923..." aria-label="Sitede ara"><button onclick="searchSite()">Ara</button></div><p id="searchResult" role="status"></p></div></div>
+<section id="kesfet"><div class="wrap"><div class="section-head"><div><h2>Keşfet</h2><p class="sub">Türkiye360'ın başlangıç noktaları</p></div></div><div class="grid">
+<article class="card"><div class="symbol">T</div><h3>Türk Tarihi</h3><p>Önemli tarihler, devletler ve tarihî şahsiyetler hakkında kısa bilgiler.</p></article>
+<article class="card"><div class="symbol">?</div><h3>Bilgi Yarışması</h3><p>Genel kültürünü test et, soruları cevapla ve puanını gör.</p></article>
+<article class="card"><div class="symbol">81</div><h3>81 İl Rehberi</h3><p>Türkiye'nin şehirlerini ve kültürel zenginliklerini keşfet. Yakında.</p></article>
+</div></div></section>
+<section id="tarih"><div class="wrap"><div class="section-head"><div><h2>Türk tarihinden önemli dönüm noktaları</h2><p class="sub">Başlangıç içerikleri</p></div></div><div class="history-list">
+<article class="card"><div class="date">1071</div><h3>Malazgirt Meydan Muharebesi</h3><p>Büyük Selçuklu hükümdarı Alp Arslan'ın Bizans kuvvetlerine karşı kazandığı zafer, Anadolu'nun Türk yerleşimine açılan sürecinde önemli bir dönüm noktası oldu.</p></article>
+<article class="card"><div class="date">1453</div><h3>İstanbul'un Fethi</h3><p>II. Mehmed'in İstanbul'u fethetmesi, dünya tarihini etkileyen önemli gelişmelerden biridir.</p></article>
+<article class="card"><div class="date">1923</div><h3>Cumhuriyet'in İlanı</h3><p>29 Ekim 1923'te Türkiye Cumhuriyeti ilan edildi ve Mustafa Kemal Atatürk ilk cumhurbaşkanı seçildi.</p></article>
+</div></div></section>
+<section id="yarisma"><div class="wrap"><div class="section-head"><div><h2>Bilgi yarışması</h2><p class="sub">Mini testini çöz ve sonucunu gör.</p></div></div><div class="quiz"><div class="score" id="progress">Soru 1 / 5 · Puan: 0</div><h3 id="question">Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?</h3><div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div><button class="btn" id="next" onclick="nextQuestion()" style="display:none">Sonraki soru</button><button class="btn" id="restart" onclick="restartQuiz()" style="display:none">Yeniden başla</button></div></div></section>
+</main>
+<footer><div class="wrap"><strong>TÜRKİYE360</strong><p>Türkiye'ye Açılan Dijital Kapı</p><p>Bu site ilk demo sürümüdür. İçerikler zamanla kaynaklarıyla genişletilecektir.</p><small>© 2026 TÜRKİYE360</small></div></footer>
+<script>
+const questions=[
+{q:"Türkiye Cumhuriyeti hangi tarihte ilan edilmiştir?",a:["23 Nisan 1920","29 Ekim 1923","19 Mayıs 1919","30 Ağustos 1922"],c:1},
+{q:"İstanbul'u fetheden Osmanlı padişahı kimdir?",a:["Yavuz Sultan Selim","Kanuni Sultan Süleyman","II. Mehmed","Orhan Bey"],c:2},
+{q:"Malazgirt Meydan Muharebesi hangi yılda yapılmıştır?",a:["1071","1299","1453","1517"],c:0},
+{q:"Türkiye'nin başkenti neresidir?",a:["İstanbul","İzmir","Bursa","Ankara"],c:3},
+{q:"Türkiye Cumhuriyeti'nin ilk cumhurbaşkanı kimdir?",a:["İsmet İnönü","Mustafa Kemal Atatürk","Celal Bayar","Fevzi Çakmak"],c:1}
+];
+let index=0,score=0,answered=false;
+function render(){answered=false;const q=questions[index];document.getElementById("question").textContent=q.q;document.getElementById("progress").textContent=`Soru ${index+1} / ${questions.length} · Puan: ${score}`;document.getElementById("feedback").textContent="";document.getElementById("next").style.display="none";document.getElementById("restart").style.display="none";const box=document.getElementById("answers");box.innerHTML="";q.a.forEach((a,i)=>{const b=document.createElement("button");b.textContent=a;b.onclick=()=>choose(i);box.appendChild(b)})}
+function choose(i){if(answered)return;answered=true;const q=questions[index];if(i===q.c){score++;document.getElementById("feedback").textContent="Doğru cevap!";}else{document.getElementById("feedback").textContent="Bu kez olmadı. Doğru cevap: "+q.a[q.c]}[...document.querySelectorAll("#answers button")].forEach((b,j)=>{b.disabled=true;if(j===q.c)b.style.borderColor="#16834a"});document.getElementById("progress").textContent=`Soru ${index+1} / ${questions.length} · Puan: ${score}`;if(index===questions.length-1){document.getElementById("next").style.display="none";document.getElementById("restart").style.display="inline-block";document.getElementById("feedback").textContent+=" Test bitti! "+questions.length+" soruda "+score+" doğru yaptın."}else document.getElementById("next").style.display="inline-block"}
+function nextQuestion(){index++;render()}function restartQuiz(){index=0;score=0;render()}
+function searchSite(){const v=document.getElementById("searchInput").value.trim().toLocaleLowerCase("tr");const out=document.getElementById("searchResult");if(!v){out.textContent="Aramak için bir kelime yaz.";return}const found=[...document.querySelectorAll("h1,h2,h3,p")].some(e=>e.textContent.toLocaleLowerCase("tr").includes(v));out.textContent=found?"Aradığın kelime sayfada bulunuyor. Sayfayı aşağı kaydırarak inceleyebilirsin.":"Bu kelime için henüz içerik eklenmemiş."}
+render();
+</script>
+</body></html>
